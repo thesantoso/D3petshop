@@ -1,0 +1,95 @@
+/* primary color: #002347 */
+/* secondary color: #fdc632 */
+
+section#content {
+  margin-top: 70px;
+}
+
+@media (max-width: 480px) {
+  section#content {
+    margin-top: 0px;
+  }
+}
+
+a[href] {
+  color: #000000;
+}
+
+.text-primary {
+  color: #000000 !important;
+}
+
+.home_banner_area {
+  min-height: 600px;
+  background-position: bottom center;
+}
+
+.card_book .product_title a {
+  width: 100%;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.card_book .book_category {
+  display: block;
+  position: absolute;
+  font-size: 0.8rem;
+  top: 10px;
+  left: 10px;
+  padding: 0px 6px;
+  background-color: #000000;
+  border-radius: 3px;
+  color: white;
+}
+
+.card_book .course_head {
+  height: 320px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}
+
+a.btn-primary {
+  color: white;
+}
+
+.list-group .list-group-item.active {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.list-group.secondary .list-group-item.active {
+  background-color: #000000;
+  border-color: white;
+  color: white;
+}
+
+.pagination .page-item .page-link {
+  color: #000000;
+  border-radius: 50%;
+  margin: 0px 3px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}

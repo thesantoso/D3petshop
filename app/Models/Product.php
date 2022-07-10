@@ -58,4 +58,6 @@ class Product extends Model
     {
         return $this->hasMany(Rating::class, 'product_id', 'product_id');
     }
+
+    
 }

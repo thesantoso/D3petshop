@@ -28,9 +28,9 @@ $route_name = request()->route()->getName();
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item {{ $route_name == 'front::home' ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ $route_name == 'front::home' ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('front::home') }}">Beranda</a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ $route_name == 'front::products.index' ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('front::products.index') }}">Produk</a>
             </li>
@@ -53,8 +53,8 @@ $route_name = request()->route()->getName();
                     >Blog Details</a
                   >
                 </li>
-              </ul>
-            </li> --}}
+              </ul> --}}
+            </li> 
             @if(auth()->user() && auth()->user()->isMember())
             <li class="nav-item submenu dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Akun Saya</a>

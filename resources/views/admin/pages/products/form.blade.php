@@ -16,7 +16,7 @@ $title => true,
 
 @section('content')
 <div class="card">
-  <form action="{{ $action }}" method="POST" enctype="multipart/form-data">
+  <form action="{{ $action }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="card-body">
       <div class="form-group row">

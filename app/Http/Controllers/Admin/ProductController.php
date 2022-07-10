@@ -18,7 +18,7 @@ class ProductController extends Controller
 
         $query = Product::with('categories');
         if ($keyword) {
-            $query->where(function($q) use ($keyword) {
+            $query->where(function ($q) use ($keyword) {
                 $q->where('title', 'like', "%{$keyword}%");
                 $q->orWhere('description', 'like', "%{$keyword}%");
             });
@@ -94,7 +94,7 @@ class ProductController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            'cover' => $product->exists ? 'image|mimes:jpeg,png' : 'required|image|mimes:jpeg,png',
+            'cover' => $product->exists ? 'image|mimes:jpeg,png,jpg' : 'required|image|mimes:jpeg,png,jpg',
             'stock' => 'required|numeric',
             'price' => 'required|numeric',
             'category_ids.*' => 'numeric|exists:categories,category_id',
@@ -108,7 +108,7 @@ class ProductController extends Controller
             }
 
             // Simpan cover
-            $cover_filename = str_slug($request->get('title')).'.'.$cover->extension();
+            $cover_filename = str_slug($request->get('title')) . '.' . $cover->extension();
             $cover->storeAs('products', $cover_filename, 'uploads');
 
             // Set nilai cover baru

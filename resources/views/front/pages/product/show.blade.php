@@ -8,29 +8,37 @@
         <div class="col-md-3">
           <img src="{{ $product->url_cover }}" alt="{{ $product->title }}" class="img-thumbnail">
         </div>
+
         <div class="col-md-6">
           <h1>{{ $product->title }}</h1>
           @if($product->category)
-          <div class="">
-            <a href="{{ route('front::products.index', ['category' => $product->category->slug]) }}">
-              <i class="ti-tag"></i>
-              {{ $product->category_name }}
-            </a>
-          </div>
-          <div class="description mt-3">
-            {!! nl2br($product->description) !!}
-          </div>
+             <div class="">
+                <a href="{{ route('front::products.index', ['category' => $product->category->slug]) }}">
+                  <i class="ti-tag"></i>
+                  {{ $product->category_name }}
+                </a>
+             </div>
+                <div class="description mt-3">
+                   {!! nl2br($product->description) !!}
+                </div>
           @endif
         </div>
+
         <div class="col-md-3">
-          <h4 class="text-muted">Harga</h4>
-          <h3>{{ $product->price_label }}</h3>
-          <hr>
-          <button class="btn add-to-cart btn-primary btn-block" data-id="{{ $product->product_id }}">
-            <i class="ti-shopping-cart"></i> Masukkan ke Keranjang
-          </button>
+          <div class="formaction">
+            <h4 class="text-muted">Harga</h4>
+            <h3>{{ $product->price_label }}</h3>
+            <hr>
+              <button class="btn add-to-cart btn-primary btn-block" data-id="{{   $product->product_id }}">
+                <i class="ti-shopping-cart"></i> Keranjang
+              </button>
+              <button class="btn whislist btn-whislist btn-block" data-id="{{ $product->product_id }}">
+                <i class="fa fa-heart"></i> Whislist
+              </button>
+          </div>
         </div>
       </div>
+      
     </article>
     <hr class="my-5">
     <h2>Produk Lainnya</h2>

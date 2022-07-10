@@ -8,7 +8,7 @@
 @section('content')
 <div class="row">
   <div class="col-sm-4 col-md-4">
-    <div class="small-box bg-info">
+    <div class="small-box bg-purple">
       <div class="inner">
         <h3>{{ $membersCount }}</h3>
         <p>Members</p>
@@ -25,12 +25,12 @@
         <p>Jumlah Produk</p>
       </div>
       <div class="icon">
-        <i class="fa fa-tag"></i>
+        <i class="fa fa-cat"></i>
       </div>
     </div>
   </div>
   <div class="col-sm-4 col-md-4">
-    <div class="small-box bg-info">
+    <div class="small-box bg-success">
       <div class="inner">
         <h3>{{ $salesCount }}</h3>
         <p>Jumlah Pesanan Selesai</p>
@@ -45,7 +45,7 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="m-0 card-title">Pesanan on progress</h4>
+        <h4 class="m-0 card-title">Pesanan Dalam Proses</h4>
       </div>
       <div class="card-body p-0">
         <div class="table-responsive">

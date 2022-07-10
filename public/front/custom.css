@@ -19,11 +19,18 @@ a[href] {
   color: #000000 !important;
 }
 
+/* BannerArea Depan */
 .home_banner_area {
   min-height: 600px;
   background-position: bottom center;
+  
 }
-
+/* #banner_image {
+  width: 100%;
+  background: url(../edustage/img/banner/pets2.jpg) no-repeat;
+  height: 600px
+  background-position: center;
+} */
 .card_book .product_title a {
   width: 100%;
   box-sizing: border-box;
@@ -31,11 +38,13 @@ a[href] {
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
-  font-size: 0.9rem;
-  color: #000000;
+  font-size: 16px;
+  color: #021973;
+  font-family: "Alumatica",sans-serif;
+  font-weight: 700;
 }
 
-.card_book .book_category {
+/* .card_book .book_category {
   display: block;
   position: absolute;
   font-size: 0.8rem;
@@ -44,31 +53,51 @@ a[href] {
   padding: 0px 6px;
   background-color: #000000;
   border-radius: 3px;
-  color: white;
+  color: purple;
+} */
+.card_book{
+ box-shadow: 0 0 10px 1px hsl(0deg 0% 82% / 49%);
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
-.card_book .course_head {
-  height: 320px;
-  background-color: white;
+/* Picture  Coontent Produk */
+.course_head {
+  height: 180px;
+  /* background-color: #f9f9ff; */
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+}
+
+/* Product Card */
+.card_book .single_course {
+  height: 466px;
+  /* background-color: white; */
   overflow: hidden;
 }
 
+/* .single_course .course_content {
+  background-color: white;
+
+} */
+
 .btn-primary {
-  background-color: #000000;
-  border-color: #000000;
-  color: white;
+  background-color: #bec8f4;
+  border-color: #bec8f4;
+  color: rgb(0, 0, 0);
+  border-radius: 25px;
 }
 
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #586ecd;
+  /* border-color: #000000; */
   color: white;
 }
 
 a.btn-primary {
-  color: white;
+  color: black;
 }
 
 .list-group .list-group-item.active {
@@ -93,3 +122,4 @@ a.btn-primary {
   border-color: #000000;
   color: white;
 }
+

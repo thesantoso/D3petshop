@@ -15,7 +15,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
+  <nav class="main-header navbar navbar-expand border-bottom navbar-dark navbar-purple">
     @include('admin.layout.navbar-menu-left')
     {{-- @include('admin.layout.search-form') --}}
     @include('admin.layout.navbar-menu-right')

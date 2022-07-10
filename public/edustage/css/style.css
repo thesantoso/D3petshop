@@ -426,8 +426,8 @@ button:focus {
 .home_banner_area {
   z-index: 1;
   min-height: 900px;
-  position: relative;
-  background: url(../img/banner/ginger.jpeg) no-repeat;
+  position: center;
+  background: url(../img/banner/logopets.jpg) no-repeat;
   background-size: cover;
 }
 .home_banner_area .banner_inner {
@@ -505,9 +505,10 @@ button:focus {
 
 .banner_area {
   position: relative;
-  background: url(../img/banner/ginger.jpeg) no-repeat center center;
+  background: url(../img/banner/pets2.jpg) no-repeat center center;
   z-index: 1;
   min-height: 392px;
+  min-width: 1024px;
   padding-top: 0 !important;
 }
 .banner_area .banner_inner {
@@ -3884,6 +3885,7 @@ h6 {
 
   .home_banner_area {
     min-height: 700px;
+    
   }
 }
 @media (max-width: 767px) {

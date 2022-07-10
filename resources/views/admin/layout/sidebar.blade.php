@@ -39,6 +39,14 @@ $orders_counts = DB::table('orders')
           </p>
         </a>
       </li>
+       <li class="nav-item">
+        <a href="{{ route('admin::users.index') }}" class="nav-link">
+          <i class="nav-icon fas fa-user nav-icon"></i>
+          <p>
+            Admin
+          </p>
+        </a>
+      </li>
       {{-- MENU Produc --}}
       <li class="nav-item has-treeview">
         <a href="#" class="nav-link">

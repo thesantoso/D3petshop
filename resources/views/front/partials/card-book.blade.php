@@ -2,10 +2,10 @@
   <div class="course_head d-flex flex-wrap justify-content-center align-content-center">
     <a href="{{ $product->url_show }}" class="d-block">
       <img class="img-fluid" src="{{ $product->url_cover }}" alt="{{ $product->title }}" />
-    </a>
-    @if($product->category_name)
+    </a> 
+    {{-- {{-- @if($product->category_name)
     <div class="product_category">{{ $product->category_name }}</div>
-    @endif
+    @endif --}}
   </div>
   <div class="course_content p-3">
     <h4 class="product_title">

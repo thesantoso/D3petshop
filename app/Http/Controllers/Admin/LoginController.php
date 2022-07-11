@@ -18,7 +18,7 @@ class LoginController extends Controller
     {
         // Validasi inputan
         $this->validate($request, [
-            'email' => 'required|email',
+            'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jun 17, 2021 at 06:20 AM
--- Server version: 10.4.15-MariaDB
--- PHP Version: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Jul 11, 2022 at 07:50 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u912004025_gingerstore`
+-- Database: `onlinestore`
 --
 
 -- --------------------------------------------------------
@@ -42,8 +41,8 @@ CREATE TABLE `bank_accounts` (
 --
 
 INSERT INTO `bank_accounts` (`bank_account_id`, `bank_name`, `account_no`, `account_owner`, `created_at`, `updated_at`) VALUES
-(1, 'BCA', '100120102', 'Toko Bukunya', '2019-06-13 18:43:50', '2019-06-13 18:43:50'),
-(2, 'Mandiri', '20120110211021', 'Toko Bukunya', '2019-06-13 18:44:21', '2019-06-13 18:44:21');
+(1, 'BNI', '1209743679', 'Muhammad Adam Mulyawan', '2019-06-13 18:43:50', '2019-06-13 18:43:50'),
+(2, 'Mandiri', '20120110211021', 'Muhammad Adam Mulyawan', '2019-06-13 18:44:21', '2019-06-13 18:44:21');
 
 -- --------------------------------------------------------
 
@@ -64,11 +63,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`category_id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Crewneck', 'crewneck', '2020-06-20 11:22:26', '2021-06-13 02:29:15'),
-(2, 'Jacket', 'jacket', '2020-06-20 11:22:36', '2021-05-31 06:19:58'),
-(3, 'Hoodie', 'hoodie', '2020-11-14 07:48:13', '2021-05-31 06:19:48'),
-(4, 'T-Shirt', 't-shirt', '2021-05-31 06:20:13', '2021-05-31 06:20:13'),
-(5, 'Halfzip', 'halfzip', '2021-06-15 04:14:00', '2021-06-15 04:14:00');
+(5, 'Hewan', 'hewan', '2021-06-15 04:14:00', '2021-07-24 05:28:37'),
+(6, 'Makanan  Hewan', 'm.hewan', '2021-07-17 06:58:59', '2021-07-24 05:28:26'),
+(7, 'Aksesoris Hewan', 'aksesoris-hewan', '2022-07-07 02:10:50', '2022-07-07 02:10:50'),
+(8, 'Cat Bed', 'cat-bed', '2022-07-07 02:11:44', '2022-07-07 02:11:44');
 
 -- --------------------------------------------------------
 
@@ -7341,7 +7339,13 @@ INSERT INTO `member_addresses` (`member_address_id`, `user_id`, `name`, `phone`,
 (6, 9, 'rumah', '88966104', '32', '3275', '3275061', '3275061001', 'jalan', 1, '2021-05-31 11:45:39', '2021-05-31 11:45:39'),
 (7, 10, 'Rumah', '02188334455', '36', '3672', '3672040', '3672040006', 'PCI', 1, '2021-06-05 05:51:51', '2021-06-05 05:51:51'),
 (8, 11, 'rumah', '098', '51', '5101', '5101010', '5101010009', 'ASDF', 1, '2021-06-07 16:24:44', '2021-06-07 16:24:44'),
-(9, 12, 'Rumah', '0819291923', '32', '3275', '3275070', '3275070001', 'Jalan jalan', 1, '2021-06-10 09:05:05', '2021-06-10 09:05:05');
+(9, 12, 'Rumah', '0819291923', '32', '3275', '3275070', '3275070001', 'Jalan jalan', 1, '2021-06-10 09:05:05', '2021-06-10 09:05:05'),
+(10, 16, 'zamrud', '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', 1, '2021-07-16 10:15:02', '2021-07-16 10:15:02'),
+(13, 18, 'dukuh zamrud', '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', 0, '2021-07-27 23:33:43', '2021-07-27 23:49:00'),
+(14, 18, 'bekasi', '1234567890', '35', '3514', '3514160', '3514160015', 'test', 1, '2021-07-27 23:48:46', '2021-07-27 23:49:00'),
+(17, 21, 'zamrud', '087888660386', '32', '3275', '3275031', '3275031003', 'Dukuh zamrud', 1, '2021-08-16 21:27:12', '2021-08-16 21:27:12'),
+(18, 24, 'RIZKY SANTOSO', '081291668312', '34', '3402', '3402050', '3402050002', 'Haji Mawar St. No.16', 1, '2022-06-14 00:14:53', '2022-06-14 00:14:53'),
+(19, 25, 'mkdirtv', '9383736726', '32', '3275', '3275061', '3275061001', 'Bekasi', 1, '2022-07-07 02:25:41', '2022-07-07 02:25:41');
 
 -- --------------------------------------------------------
 
@@ -7364,22 +7368,20 @@ CREATE TABLE `member_profiles` (
 --
 
 INSERT INTO `member_profiles` (`member_profile_id`, `user_id`, `birth_date`, `gender`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 2, '1991-04-19', 'female', '(+62) 279 8307 214', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(2, 3, '1994-12-23', 'female', '0580 8293 595', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(3, 4, '1984-03-24', 'male', '0323 2825 075', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(4, 5, '1989-11-02', 'male', '(+62) 918 3493 3259', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(5, 6, '1973-01-19', 'male', '(+62) 745 6308 2882', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(6, 7, '2003-08-31', 'female', '(+62) 22 4981 497', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(7, 8, '2004-05-29', 'male', '0510 5864 851', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(8, 9, '1979-02-25', 'female', '0649 7487 386', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(9, 10, '1987-11-20', 'female', '0892 2112 4596', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(10, 11, '1975-07-11', 'male', '0854 2120 1967', '2019-06-25 11:50:14', '2019-06-25 11:50:14'),
-(11, 7, '2008-12-29', 'male', '0895349417505', '2020-06-20 11:48:31', '2020-06-20 11:48:31'),
-(12, 8, '2020-11-12', 'male', '08191919', '2020-11-14 07:40:15', '2020-11-14 07:40:15'),
 (13, 9, '1999-08-02', 'male', '098765453627', '2021-05-31 11:44:15', '2021-05-31 11:44:15'),
 (14, 10, '2021-02-15', 'female', '02188334455', '2021-06-05 05:48:06', '2021-06-05 05:48:06'),
 (15, 11, '1999-03-24', 'female', '081912445634', '2021-06-07 15:39:25', '2021-06-07 15:39:25'),
-(16, 12, '2021-06-04', 'male', '082111768038', '2021-06-10 08:52:06', '2021-06-10 08:52:06');
+(16, 12, '2021-06-04', 'male', '082111768038', '2021-06-10 08:52:06', '2021-06-10 08:52:06'),
+(17, 14, '2002-02-12', 'male', '0282782', '2021-07-11 06:52:04', '2021-07-11 06:52:04'),
+(18, 15, '2000-01-16', 'male', '087781842034', '2021-07-11 07:14:06', '2021-07-11 07:14:06'),
+(19, 16, '2000-05-11', 'male', '+6287888660386', '2021-07-16 10:13:57', '2021-07-16 10:13:57'),
+(20, 17, '2011-11-11', 'male', '0822222222222', '2021-07-25 02:16:28', '2021-07-25 02:16:28'),
+(21, 18, '2000-05-11', 'male', '+6287888660386', '2021-07-27 23:33:03', '2021-07-27 23:33:03'),
+(22, 19, '1111-11-11', 'male', '1234567890', '2021-07-28 20:49:36', '2021-07-28 20:49:36'),
+(23, 20, '1290-03-12', 'male', '1234567890', '2021-08-01 07:07:07', '2021-08-01 07:07:07'),
+(24, 21, '2000-05-11', 'male', '087888660386', '2021-08-11 19:38:13', '2021-08-11 19:38:13'),
+(25, 24, '2022-03-01', 'male', '087781842034', '2022-06-14 00:06:25', '2022-06-14 00:06:25'),
+(26, 25, '2022-07-02', 'male', '9383736726', '2022-07-07 02:25:07', '2022-07-07 02:25:07');
 
 -- --------------------------------------------------------
 
@@ -7442,8 +7444,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `code`, `member_user_id`, `member_address_id`, `shipping_cost`, `phone`, `province_id`, `regency_id`, `district_id`, `subdistrict_id`, `address`, `status`, `created_at`, `updated_at`) VALUES
-(12, '210614IC2', 12, 9, 10000, '0819291923', '32', '3275', '3275070', '3275070001', 'Jalan jalan', 'finish', '2021-06-14 13:41:56', '2021-06-14 13:43:15'),
-(13, '2106150IZ', 12, 9, 10000, '0819291923', '32', '3275', '3275070', '3275070001', 'Jalan jalan', 'shipping', '2021-06-15 08:12:17', '2021-06-15 08:14:07');
+(18, '210725UCX', 16, 10, 10000, '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', '', '2021-07-24 19:57:32', '2021-07-28 22:33:05'),
+(23, '210728CCU', 18, 13, 10000, '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', '', '2021-07-27 23:37:10', '2021-07-28 22:38:53'),
+(28, '210729TWZ', 16, 10, 10000, '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', 'canceled', '2021-07-29 06:44:26', '2021-08-02 06:28:05'),
+(29, '210729XPA', 16, 10, 10000, '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', '', '2021-07-29 06:45:30', '2021-08-16 23:42:41'),
+(35, '210802OAP', 16, 10, 10000, '+6287888660386', '32', '3275', '3275031', '3275031003', 'Dukuh Zamrud Permata Legenda 2 Blok PA 11 No 6 Kecamatan Mustika Jaya Kelurahan Mustika Jaya Bekasi', 'finish', '2021-08-02 06:05:57', '2021-08-08 06:54:00'),
+(43, '220707RFS', 25, 19, 10000, '9383736726', '32', '3275', '3275061', '3275061001', 'Bekasi', 'finish', '2022-07-07 02:26:41', '2022-07-07 02:36:07');
 
 -- --------------------------------------------------------
 
@@ -7464,8 +7470,14 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`order_detail_id`, `order_id`, `product_id`, `price`, `qty`) VALUES
-(14, 12, 16, 130000, 1),
-(15, 13, 16, 130000, 1);
+(22, 18, 22, 420000, 1),
+(27, 23, 17, 150000, 1),
+(32, 28, 24, 120000, 1),
+(33, 29, 17, 150000, 1),
+(34, 29, 18, 230000, 1),
+(42, 35, 17, 150000, 1),
+(50, 43, 26, 150000, 1),
+(51, 43, 27, 230000, 1);
 
 -- --------------------------------------------------------
 
@@ -7507,7 +7519,22 @@ INSERT INTO `payment_confirmations` (`payment_confirmation_id`, `order_id`, `ban
 (5, 6, 2, '210605IRR-210605060247.jpeg', 'pending', '2021-06-05 06:02:47', '2021-06-05 06:02:47'),
 (6, 11, 2, '210610MIF-210610090554.jpeg', 'pending', '2021-06-10 09:05:54', '2021-06-10 09:05:54'),
 (7, 12, 1, '210614IC2-210614014214.png', 'pending', '2021-06-14 13:42:14', '2021-06-14 13:42:14'),
-(8, 13, 1, '2106150IZ-210615081242.png', 'pending', '2021-06-15 08:12:42', '2021-06-15 08:12:42');
+(8, 13, 1, '2106150IZ-210615081242.png', 'pending', '2021-06-15 08:12:42', '2021-06-15 08:12:42'),
+(9, 14, 1, '210716RNW-210716051552.png', 'pending', '2021-07-16 10:15:52', '2021-07-16 10:15:52'),
+(10, 23, 2, '210728CCU-210728064339.png', 'pending', '2021-07-27 23:43:39', '2021-07-27 23:43:39'),
+(11, 18, 2, '210725UCX-210729052913.png', 'pending', '2021-07-28 22:29:13', '2021-07-28 22:29:13'),
+(12, 35, 1, '210802OAP-210802011143.png', 'pending', '2021-08-02 06:11:43', '2021-08-02 06:11:43'),
+(13, 28, 1, '210729TWZ-210802011653.png', 'pending', '2021-08-02 06:16:53', '2021-08-02 06:16:53'),
+(14, 36, 2, '210817ABX-210817042917.png', 'pending', '2021-08-16 21:29:17', '2021-08-16 21:29:17'),
+(15, 36, 1, '210817ABX-210817042930.png', 'pending', '2021-08-16 21:29:30', '2021-08-16 21:29:30'),
+(16, 37, 1, '210817KP7-210817063922.png', 'pending', '2021-08-16 23:39:22', '2021-08-16 23:39:22'),
+(17, 38, 1, '210817XHC-210817072641.png', 'pending', '2021-08-17 00:26:41', '2021-08-17 00:26:41'),
+(18, 39, 1, '210817UFO-210817075936.png', 'pending', '2021-08-17 00:59:36', '2021-08-17 00:59:36'),
+(19, 39, 2, '210817UFO-210817080335.png', 'pending', '2021-08-17 01:03:35', '2021-08-17 01:03:35'),
+(20, 39, 2, '210817UFO-210817080911.png', 'pending', '2021-08-17 01:09:11', '2021-08-17 01:09:11'),
+(21, 40, 1, '210820JRE-210820125145.png', 'pending', '2021-08-20 05:51:45', '2021-08-20 05:51:45'),
+(22, 42, 1, '220614MTM-220614072101.png', 'pending', '2022-06-14 00:21:01', '2022-06-14 00:21:01'),
+(23, 43, 2, '220707RFS-220707092716.png', 'pending', '2022-07-07 02:27:16', '2022-07-07 02:27:16');
 
 -- --------------------------------------------------------
 
@@ -7535,6 +7562,7 @@ CREATE TABLE `products` (
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `cover` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
   `stock` int(10) UNSIGNED NOT NULL,
+  `Size` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -7544,15 +7572,22 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `title`, `slug`, `description`, `cover`, `stock`, `price`, `created_at`, `updated_at`) VALUES
-(10, 'Crewneck Dickies', 'crewneck-dickies', 'Second Import\r\nSize : S fit M\r\nCondition : 9.0/10.0\r\nP : 60 Cm\r\nL : 45 Cm', 'crewneck-dickies.jpeg', 1, 150000, '2021-06-13 02:32:35', '2021-06-13 02:32:35'),
-(11, 'Crewneck Lollypop', 'crewneck-lollypop', 'Size = XL / Oversize\r\nCondition = 9.0/10\r\nP : 66 cm\r\nL :  61 cm', 'crewneck-lollypop.jpeg', 1, 70000, '2021-06-14 02:43:34', '2021-06-14 02:43:34'),
-(12, 'Hoodie Gap', 'hoodie-gap', 'Size = Fit L\r\nCondition = 9.0/10\r\nP : 65 cm\r\nL : 54 cm', 'hoodie-gap.jpeg', 1, 160000, '2021-06-14 02:45:34', '2021-06-14 02:45:34'),
-(13, 'Hoodie Adidas', 'hoodie-adidas', 'Size = Fit L\r\nCondition = 9.0/10\r\nP : 70 cm\r\nL : 55 cm', 'hoodie-adidas.jpeg', 1, 200000, '2021-06-14 02:47:35', '2021-06-14 02:47:35'),
-(14, 'Hoodie Gap Yellow', 'hoodie-gap-yellow', 'Size = Fit XL\r\nCondition = 9.0/10\r\nP : 74 cm\r\nL : 64 cm', 'hoodie-gap-yellow.jpeg', 1, 230000, '2021-06-14 02:48:44', '2021-06-14 02:48:44'),
-(15, 'Hoodie Feltics', 'hoodie-feltics', 'Size = Fit L\r\nCondition = 9.0/10\r\nP : 66 cm\r\nL : 54 cm', 'hoodie-feltics.jpeg', 1, 165000, '2021-06-14 02:49:56', '2021-06-14 02:49:56'),
-(16, 'Crewneck Fluke', 'crewneck-fluke', 'Size = L fit XL\r\nCondition = 9.0/10\r\nP : 70 cm\r\nL : 58 cm', 'crewneck-fluke.jpeg', 1, 130000, '2021-06-14 02:51:33', '2021-06-14 02:51:33'),
-(17, 'Halfzip Victim', 'halfzip-victim', 'Size = L fit XL\r\nCondition = 9.0/10\r\nP : 70 cm\r\nL :  62 cm', 'halfzip-victim.jpeg', 1, 80000, '2021-06-15 04:20:59', '2021-06-15 04:20:59');
+INSERT INTO `products` (`product_id`, `title`, `slug`, `description`, `cover`, `stock`, `Size`, `price`, `created_at`, `updated_at`) VALUES
+(17, 'Royal Canin Pro Queen 34 - Makanan Kucing Hamil', 'royal-canin-pro-queen-34-makanan-kucing-hamil', 'Royal Canin Pro Queen 34 - Makanan Kucing Hamil - 4 kg\r\nRoyal Canin Pro Queen 34 adalah produk makanan kering untuk kucing yang sedang hamil dan menyusui. Nutrisi pada ibu kucing memiliki pengaruh yang sangat besar kepada anak-anaknya selama masa hamil hingga menyusui. Untuk itu, Royal Canin Pro Queen 34 hadir untuk memenuhi kebutuhan nutrisi yang dibutuhkan oleh kucing selama masa hamil dan menyusui.\r\n\r\n- Mendukung masa kehamilan\r\n- Nutrisi khusus untuk ibu hamil hingga menyusui\r\n- Menjaga kesehatan ibu hamil hingga menyusui\r\n\r\nBerat: 4200g', 'royal-canin-pro-queen-34-makanan-kucing-hamil.png', 45, '', 556000, '2021-06-15 04:20:59', '2022-07-10 05:49:27'),
+(18, 'Royal Canin Skin Hairball / Gastro Hairball 2kg - makanan kucing', 'royal-canin-skin-hairball-gastro-hairball-2kg-makanan-kucing', 'KOMPOSISI: protein unggas dehidrasi, gluten gandum *, beras, serat sayuran, jagung, lemak hewan, gandum, dihidrolisis protein hewani, jagung gluten, bubur bit, sekam psyllium dan biji (2%), mineral, minyak kedelai, ragi, minyak ikan , fructo-oligo-sakarida, minyak borage, ekstrak marigold (sumber lutein). TAMBAH (per kg): aditif Gizi: Vitamin A: 30.900 IU, Vitamin D3: 800 IU, E1 (Iron): 40 mg, E2 (Yodium): 4 mg, E4 (Copper): 6 mg, E5 (Mangan): 52 mg, E6 (Zinc): 157 mg, E8 (Selenium): 0.07 mg - Pengawet - Antioksidan. SENYAWA ANALITIS: Protein: 36% - Fat konten: 14% - abu mentah: 8,3% - serat kasar: 7,3%. * L.I.P .: protein karena asimilasi yang sangat tinggi.\r\n\r\n\r\nhairball KOMPLEKS\r\nDiperkaya dengan psyllium untuk membantu dalam transit sehat hairballs.\r\n\r\nKULIT BARRIER\r\nMendukung fungsi penghalang dari kulit dengan kompleks dipatenkan lima nutrisi khusus.\r\n\r\nS / O Indeks\r\nDiformulasikan untuk membantu mencegah kristal kemih (struvite & kristal oksalat)\r\n\r\nBerat: 2100g', 'royal-canin-skin-hairball-gastro-hairball-2kg-makanan-kucing.png', 500, '', 368000, '2021-07-17 06:44:07', '2022-07-10 05:44:31'),
+(19, 'Whiskas Pouch 85gr - Makanan Basah Kucing', 'whiskas-pouch-85gr-makanan-basah-kucing', 'Whiskas Pouch 85gr - Makanan Basah Kucing\r\n\r\n1. Dirancang khusus agar lengkap dan seimbang untuk kucing berusia 1 tahun ke atas.\r\n2. Diperkaya dengan omega 3 & 6, lemak dan seng untuk mantel yang sehat dan berkilau.\r\n3. Lengkap dengan vitamin A dan taurin untuk penglihatan sehat.\r\n4. Diisi dengan protein dari ikan asli, termasuk lemak, vitamin dan mineral, sehingga kucing Anda tetap bugar dan bahagia.\r\n5. Mengandung antioksidan (vitamin E dan selenium) untuk sistem kekebalan tubuh yang sehat.\r\n\r\nBerat: 100g', 'whiskas-pouch-85gr-makanan-basah-kucing.png', 2000, '', 8000, '2021-07-17 06:57:59', '2022-07-10 05:42:10'),
+(20, 'Happy Cat Culinary 1+ Springwater Trout 10 kg - Makanan Kucing Premium', 'happy-cat-culinary-1-springwater-trout-10-kg-makanan-kucing-premium', 'Manjakan kucing dewasamu yang aktif dengan lezatnya daging unggas dan ikan trout\r\nyang mudah dicerna dan kaya asam lemak omega 3 dan 6 yang baik untuk kesehatan\r\nkulit dan bulu\r\n\r\nHAPPY CAT Culinary Springwater Trout dengan resep kelezatan disetiap butirnya\r\nuntuk si pencinta daging\r\n\r\n\"Dilengkapi dengan All in One Concept:\r\n- Mengandung taurine untuk mendukung kesehatan jantung\r\n- Kandungan mineral yang seimbang untuk menunjang kesehatan saluran kemih\r\n- Kaya Omega 3 dan 6 untuk kulit yang sehat dan bulu yang berkilau\r\n- Zinc, vitamin, dan antioksidan untuk meningkatkan sistem kekebalan tubuh\r\n- Dilengkapi prebiotik dan serat pangan kualitas tinggi untuk dukung sistem\r\npencernaan yang baik\"\r\n\r\nBerat: 10000g', 'happy-cat-culinary-1-springwater-trout-10-kg-makanan-kucing-premium.png', 200, '', 785000, '2021-07-17 07:20:57', '2022-07-10 04:44:07'),
+(21, 'Happy Cat Sterilised 1+ Atlantic Salmon 10 kg - Makanan Kucing Steril', 'happy-cat-sterilised-1-atlantic-salmon-10-kg-makanan-kucing-steril', 'Nutrisi sempurna untuk kucing yang sudah disteril, dilengkapi juga dengan Omega\r\n3 dan 6 untuk kesehatan kulit dan bulu\r\n\r\nHAPPY CAT Sterilised Salmon sangat lezat dan mengenyangkan dengan\r\nkandungan lemak hanya 10.5% sehingga berat badan kucingmu tetap stabil walau\r\nsudah di steril\r\n\r\nHAPPY CAT dilengkapi dengan All in One Concept\r\n* Mengandung Taurine untuk kesehatan hati\r\n* Menjaga keseimbangan PH di saluran kemih (Urinary Care)\r\n* Kaya akan Omega 3 dan 6 yang baik untuk kesehatan kulit dan bulu\r\n* Meningkatkan sistem kekebalan tubuh dengan zinc, antioksidan alami dari\r\nvitamin e dan vitamin c\r\n* Dengan prebiotik kualitas terbaik dan serat pangan untuk mendukung pencernaan\r\nyang optimal\r\n\r\nBerat: 10000g', 'happy-cat-sterilised-1-atlantic-salmon-10-kg-makanan-kucing-steril.png', 250, '', 850000, '2021-07-17 07:24:13', '2022-07-10 05:38:39'),
+(22, 'Happy Cat Minkas Urinary Care 10 kg - Makanan Kucing Perawatan Saluran Kemih', 'happy-cat-minkas-urinary-care-10-kg-makanan-kucing-perawatan-saluran-kemih', 'Happy Cat Minkas Urinary Care 10 kg - Makanan Kucing Perawatan Saluran Kemih\r\n\r\nPerawatan Kencing Happy Cat Minkas\r\n\r\nPakan PREMIUM lengkap untuk semua kucing dewasa untuk mendukung saluran kemih.\r\n\r\nHappy Cat Food Minkas Urinary Care adalah makanan dewasa premium premium yang lembut dan seimbang untuk kucing yang sensitif. Protein unggas yang berkualitas dan mudah dicerna, serta magnesium dan fosfor yang berkurang membantu mengurangi pH urin dan dengan demikian mencegah beban ginjal. Oleh karena itu, ini adalah pakan yang optimal dan lembut untuk semua kucing dewasa untuk pencegahan penyakit saluran kemih yang efektif.\r\n\r\nProtein hewani yang sangat tinggi (84% *), tidak adanya kedelai dan ekstrak protein nabati lainnya, bahan baku sereal berkualitas tinggi dan tidak adanya pewarna buatan, perasa dan pengawet memberikan Premium feed ini kecernaan yang sangat baik dan pendapatan yang sangat baik.\r\n\r\nBerat: 10000g', 'happy-cat-minkas-urinary-care-10-kg-makanan-kucing-perawatan-saluran-kemih.png', 250, '', 590000, '2021-07-17 07:27:47', '2022-07-10 05:26:44'),
+(23, 'Bring Me The Horizon', 'bring-me-the-horizon', 'Bring Me the Horizon adalah grup musik rock Inggris yang dibentuk di Sheffield pada tahun 2004. Saat ini grup ini digawangi vokalis Oliver Sykes, gitaris Lee Malia, bassis Matt Kean, drummer Matt Nicholls, dan kibordis Jordan Fish.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran M\r\nSize Fit Internasional\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 70cm x L 52cm', 'bring-me-the-horizon.png', 2, '', 230000, '2021-07-17 07:30:22', '2021-08-24 02:48:43'),
+(24, 'Wali Band', 'wali-band', 'Wali adalah grup musik pop melayu asal Indonesia yang berdomisili di Ciputat, Tangerang Selatan. Grup musik ini dibentuk pada tahun 1999.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran L\r\nSize Fit Lokal\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 70cm x L 52cm', 'wali-band.png', 2, '', 150000, '2021-07-17 07:32:34', '2022-07-07 02:09:55'),
+(25, 'The Beatles', 'the-beatles', 'The Beatles adalah kelompok pemusik Inggris beraliran rock, dibentuk di Liverpool pada tahun 1960, sering kali dianggap sebagai pemusik tersukses secara komersial dan paling banyak mendapat pujian dalam musik populer.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran M\r\nSize Fit Internasional\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 70cm x L 52cm', 'the-beatles.png', 3, '', 230000, '2021-07-27 04:46:43', '2021-08-24 02:48:17'),
+(26, 'God Bless', 'god-bless', 'God Bless adalah grup musik rock 1970-an yang berasal dari Jakarta, Indonesia. Dasawarsa 1970-an bisa dianggap sebagai tahun-tahun kejayaan mereka. Salah satu bukti nama besar mereka adalah sewaktu God Bless dipilih sebagai pembuka konser grup musik rock legendaris dunia, Deep Purple di Jakarta.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran M\r\nSIze Fit Lokal\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 67cm x L 49cm', 'god-bless.png', 3, '', 150000, '2021-08-03 05:53:13', '2021-08-24 02:48:07'),
+(27, 'Black Sabbath', 'black-sabbath', 'Black Sabbath adalah kelompok musik dari Inggris yang dianggap sebagai salah satu pendiri aliran musik heavy metal. Didirikan oleh Ozzy Osbourne, Tony Iommi, Geezer Butler dan Bill Ward, mereka telah mengalami sekian banyaknya pergantian personel sehingga pada satu saat hanya Iommi yang tersisa dari formasi awal.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran L\r\nSize Fit Internasional\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 73cm x L 55cm', 'black-sabbath.png', 2, '', 230000, '2021-08-03 05:56:02', '2021-08-24 02:47:55'),
+(28, 'Boomerang', 'boomerang', 'BOOMERANG adalah sebuah kelompok musik Hardkrock papan atas Indonesia dari Surabaya. Resmi berdiri pada 8 Mei 1994 dengan nama Lost Angels, tetapi sudah mulai berkiprah sejak tahun 1991. Mereka konsisten tampil di jalur rock, meskipun demikian mereka tidak membatasi pengaruh berbagai macam aliran/style musik.\r\n\r\nBahan Cotton Combed 30s\r\nTersedia dalam ukuran L\r\nSize Fit Lokal\r\nUnisex\r\nOriginal Merch\r\nGuarantee money back\r\n\r\n-Detail Ukuran-\r\nP 70cm x L 52cm', 'boomerang.png', 10, '', 150000, '2021-08-03 05:59:31', '2021-08-24 02:47:44'),
+(29, 'Sunbed \'Mister Brown\'', 'sunbed-mister-brown', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'queen.png', 4, '', 350000, '2021-08-03 06:04:20', '2022-07-06 02:23:13'),
+(30, 'Happy Cat Junior Farm Duck 1,3 kg - Makanan Anak Kucing 2-4 bulan', 'happy-cat-junior-farm-duck-13-kg-makanan-anak-kucing-2-4-bulan', 'Happy Cat Junior Farm Duck cocok untuk kucing muda berusia 4 hingga 12 bulan. Bahkan hewan muda pun menganggap biskuit kecil itu mudah pecah. Resepnya bebas biji-bijian dan karenanya ideal untuk kucing muda yang sangat sensitif dan pemilih. Dan tentu saja kami telah mengadaptasi resepnya untuk memastikan kucing Anda tumbuh kuat dan sehat.\r\n\r\nHappy Cat Junior Farm Duck disiapkan dengan bebek yang lezat. Makanan berkualitas tinggi yang lezat dan seimbang ini memberikan dasar yang ideal untuk pertumbuhan yang stabil dan umur panjang yang sehat untuk kucing Anda. Tidak melupakan jaminan rasa kami! Poin plus lainnya adalah Happy Cat Natural Life Concept ® yang holistik dan unik.\r\n\r\nBerat: 1500g', 'happy-cat-junior-farm-duck-13-kg-makanan-anak-kucing-2-4-bulan.png', 20, '', 165000, '2022-07-10 02:45:29', '2022-07-10 02:45:29'),
+(31, 'jaaa', 'jaaa', 'adaddad', 'jaaa.png', 20, '', 400000, '2022-07-10 09:11:39', '2022-07-10 09:11:39');
 
 -- --------------------------------------------------------
 
@@ -7586,7 +7621,21 @@ INSERT INTO `product_categories` (`category_id`, `product_id`) VALUES
 (3, 14),
 (3, 15),
 (1, 16),
-(5, 17);
+(5, 23),
+(6, 20),
+(6, 19),
+(6, 17),
+(5, 25),
+(5, 27),
+(5, 29),
+(6, 30),
+(6, 22),
+(6, 21),
+(6, 18),
+(8, 24),
+(8, 26),
+(8, 28),
+(6, 31);
 
 -- --------------------------------------------------------
 
@@ -7665,7 +7714,8 @@ INSERT INTO `ratings` (`rating_id`, `user_id`, `product_id`, `rating`, `created_
 (4, 11, 9, 5, '2021-06-10 07:33:56', '2021-06-10 07:33:56'),
 (5, 12, 1, 4, '2021-06-10 09:26:14', '2021-06-10 09:26:54'),
 (6, 12, 7, 5, '2021-06-10 09:26:17', '2021-06-10 09:26:45'),
-(7, 12, 2, 5, '2021-06-10 09:26:18', '2021-06-10 09:26:47');
+(7, 12, 2, 5, '2021-06-10 09:26:18', '2021-06-10 09:26:47'),
+(8, 16, 17, 5, '2021-07-17 01:34:26', '2021-08-08 07:24:35');
 
 -- --------------------------------------------------------
 
@@ -89384,18 +89434,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `type`, `email_verified_at`, `password`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@admin.com', 'admin', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(2, 'Sample Member 1', 'member.1@sample.com', 'member', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(3, 'Sample Member 2', 'member.2@sample.com', 'member', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(4, 'Sample Member 3', 'member.3@sample.com', 'member', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(5, 'Sample Member 4', 'member.4@sample.com', 'member', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(6, 'Sample Member 5', 'member.5@sample.com', 'member', NULL, '$2y$10$cOepeLlJXpynOP60He0dOefu8KxAV2DYG/JdVUgtS0ugObf9VgH9K', 'active', NULL, '2019-06-25 11:50:14', '2020-02-23 13:03:53'),
-(7, 'Customer 1', 'customer1@mail.com', 'member', NULL, '$2y$10$AbNBBQTwL3I.a1ufUVjhJeF6Sz8zLD3cNMPVwiBzpsoNhf4s8rLe2', 'active', NULL, '2020-06-20 11:48:31', '2020-06-20 11:48:31'),
-(8, 'Test', 'test@mail.com', 'member', NULL, '$2y$10$T9/oCWBipFMwxRDSprmlseZLdGm.2aaYwg5PA3q17sN45tn9n/.vC', 'active', NULL, '2020-11-14 07:40:15', '2020-11-14 07:40:15'),
-(9, 'mark lee', 'mark123@gmail.com', 'member', NULL, '$2y$10$/0cZeCK/l41EGzaBbjw4VeSw8zncD9POLz5vGsr3gRHlJST.qcZgO', 'active', NULL, '2021-05-31 11:44:15', '2021-05-31 11:44:15'),
-(10, 'cust', 'cust@gmail.com', 'member', NULL, '$2y$10$nXJqf5WrZMnapv/uZRzOK.YMz1XkKgnH2O3LCY08obcKe0jW.ldx2', 'active', NULL, '2021-06-05 05:48:06', '2021-06-05 05:48:06'),
-(11, 'Paperline', 'paperline@gmail.com', 'member', NULL, '$2y$10$mKw2HlMg9UZV.um/9leRI.U1QsNhNDVoIP.ecJo2wLjc0tB58arE.', 'active', NULL, '2021-06-07 15:39:25', '2021-06-07 15:39:25'),
-(12, 'akmal', 'akmal@gmail.com', 'member', NULL, '$2y$10$C.5RBrbI7wJp9ZaJoRAlrOLa.BlYnwCRJz1tietS8kFHTr8wfB/UW', 'active', NULL, '2021-06-10 08:52:06', '2021-06-10 08:52:06');
+(12, 'san', 'san@gmail.com', 'member', NULL, '$2y$10$YBeQhAmqJ1Wkj2PaC50AJeG9Qzaw0ydEypn5GQwl6Soka6DdyAv4', 'active', NULL, '2021-06-10 08:52:06', '2021-06-10 08:52:06'),
+(15, 'Admin Rizky', 'test@gmail.com', 'admin', NULL, '$2y$10$FpEEiJiYs/XpncEf7LzC8euhcn4wOQV2dVhgTPmWHGlKZRhyEaHPa', 'active', NULL, '2021-07-11 07:14:06', '2021-07-11 07:14:06'),
+(21, 'adam', 'adammulyawann@gmail.com', 'member', NULL, '$2y$10$KEvNEwXi9kk6xWerdXWMKuDPX.UvUY.40h6At96JuexNdkvwoPAYe', 'active', NULL, '2021-08-11 19:38:13', '2021-08-11 19:38:13'),
+(23, 'admin', 'admin@gmail.com', 'admin', NULL, '$2y$10$YBeQhAmqJ1Wkj2PaC50AJeG9Qzaw0ydEypn5GQwl6Soka6DdyAv4', 'active', NULL, NULL, NULL),
+(24, 'dimas gay', 'dimasgay@gmail.com', 'member', NULL, '$2y$10$EKe6Ih2G1JM0lbByiRcrguC9xxuIu4mDLaV./d.YhjYB6oGOkqym.', 'active', NULL, '2022-06-14 00:06:25', '2022-06-14 00:06:25'),
+(25, 'kadir', 'mkdirtv@gmail.com', 'member', NULL, '$2y$10$.cvFB5sA0zUrP89qac3WK.83LbK2gzAEVuFiNv7Bj9MDv46ErI2Iq', 'active', NULL, '2022-07-07 02:25:07', '2022-07-07 02:25:07');
 
 --
 -- Indexes for dumped tables
@@ -89566,19 +89610,19 @@ ALTER TABLE `bank_accounts`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `member_addresses`
 --
 ALTER TABLE `member_addresses`
-  MODIFY `member_address_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `member_address_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `member_profiles`
 --
 ALTER TABLE `member_profiles`
-  MODIFY `member_profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `member_profile_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -89590,19 +89634,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `order_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `order_detail_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `order_detail_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `payment_confirmations`
 --
 ALTER TABLE `payment_confirmations`
-  MODIFY `payment_confirmation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `payment_confirmation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `predictions`
@@ -89614,13 +89658,13 @@ ALTER TABLE `predictions`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `product_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `rating_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `rating_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `shipping_costs`
@@ -89638,7 +89682,7 @@ ALTER TABLE `similarities`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables

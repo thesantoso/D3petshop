@@ -3,9 +3,9 @@
 @section('content')
   @include('front.layout.home-banner')
 
-  {{-- <div class="pt-5">
+  <div class="pt-5">
     @include('front.layout.popular-products', ['products' => $popular_products])
-  </div> --}}
+  </div>
 
   <hr>
 

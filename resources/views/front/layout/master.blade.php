@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="{{ asset('edustage') }}/vendors/owl-carousel/owl.carousel.min.css" />
     {{-- <link rel="stylesheet" href="{{ asset('edustage') }}/vendors/nice-select/css/nice-select.css" /> --}}
     <!-- main css -->
-    <link rel="stylesheet" href="{{ asset('edustage') }}/css/style.css" />
     <link rel="stylesheet" href="{{ asset('front/custom.css') }}" />
+    <link rel="stylesheet" href="{{ asset('edustage') }}/css/style.css" />
     @show
   </head>
 
@@ -36,6 +36,7 @@
     @endif
 
     @section('scripts')
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="91846213-f1b6-4018-bab7-3c978930b2f7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ asset('edustage') }}/js/jquery-3.2.1.min.js"></script>

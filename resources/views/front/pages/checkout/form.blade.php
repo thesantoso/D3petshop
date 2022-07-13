@@ -16,7 +16,7 @@
               <h4>Alamat Pengiriman</h4>
               @if($addresses->count() == 0)
               <div class="alert alert-secondary text-center p-4">
-                Anda belum menyimpan satupun alamat.
+                Tambah alamat dulu yukk!
                 <br>
                 <br>
                 <button class="btn add-member-address btn-primary">
@@ -135,7 +135,7 @@
       <p>
         Opps! Keranjang belanja anda masih kosong.
       </p>
-      <a href="{{ route('front::products.index') }}" class="btn btn-primary">Cari Baju</a>
+      <a href="{{ route('front::products.index') }}" class="btn btn-primary">Lanjut Belanja</a>
     </div>
     @endif
   </div>

@@ -1663,7 +1663,7 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, .05)
+    background-color: transparent
 }
 
 .table-hover tbody tr:hover {
@@ -2577,15 +2577,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-info {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8
+    background-color: #bec8f4;
+    border: 1px solid var(--N75,#E5E7E9);
+    border-radius: 25px;
+    color: var(--color-text-high,rgba(49,53,59,0.96));
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b
+    background-color: #586ecd;
+    border-color: #586ecd
 }
 
 .btn-info.focus,
@@ -2613,6 +2614,7 @@ fieldset:disabled a.btn {
 .show>.btn-info.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5)
 }
+
 
 .btn-warning {
     color: #212529;
@@ -2646,6 +2648,13 @@ fieldset:disabled a.btn {
     border-color: #c69500
 }
 
+/* .btn-edit{
+    background-color: #bec8f4;
+    border: 1px solid var(--N75,#E5E7E9);
+    border-radius: 25px;
+    color: var(--color-text-high,rgba(49,53,59,0.96));
+} */
+
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .btn-warning:not(:disabled):not(.disabled):active:focus,
 .show>.btn-warning.dropdown-toggle:focus {
@@ -2656,6 +2665,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545
+    border-radius: 8px;
 }
 
 .btn-danger:hover {
@@ -9128,6 +9138,11 @@ button.bg-dark:hover {
     color: #fff !important
 }
 
+.text-body {
+    color: #fff !important;
+    font-size: 14px;
+}
+
 .text-primary {
     color: #007bff !important
 }
@@ -9215,6 +9230,7 @@ a.text-dark:hover {
 .text-white-50 {
     color: rgba(255, 255, 255, .5) !important
 }
+
 
 .text-hide {
     font: 0/0 a;

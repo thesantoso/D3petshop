@@ -12,7 +12,7 @@ $orders_counts = DB::table('orders')
   <!-- Sidebar user (optional) -->
   <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
-      <img src="{{ auth()->user()->url_avatar }}" class="img-circle elevation-2" alt="User Image">
+      <img src="	http://d3petshop.com/edustage/img/favicon.png" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info" style="margin-top: -10px">
       <a href="#" class="d-block">{{ auth()->user()->name }}</a>
@@ -39,14 +39,14 @@ $orders_counts = DB::table('orders')
           </p>
         </a>
       </li>
-       <li class="nav-item">
-        <a href="{{ route('admin::users.index') }}" class="nav-link">
+       {{-- <li class="nav-item">
+        <a href="{{ route('admin::users.admin') }}" class="nav-link">
           <i class="nav-icon fas fa-user nav-icon"></i>
           <p>
             Admin
           </p>
         </a>
-      </li>
+      </li> --}}
       {{-- MENU Produc --}}
       <li class="nav-item has-treeview">
         <a href="#" class="nav-link">

@@ -425,10 +425,10 @@ button:focus {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  min-height: 900px;
-  position: center;
+  min-height: 500px;
+  position:cover;
   background: url(../img/banner/logopets.jpg) no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 .home_banner_area .banner_inner {
   position: absolute;
@@ -441,6 +441,7 @@ button:focus {
   z-index: 10;
   width: 100%;
 }
+
 @media (max-width: 991px) {
   .home_banner_area .banner_inner {
     top: 50%;

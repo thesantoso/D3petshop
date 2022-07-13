@@ -56,6 +56,12 @@ $route_name = request()->route()->getName();
               </ul> --}}
             </li> 
             @if(auth()->user() && auth()->user()->isMember())
+            <li class="nav-item {{ $route_name == 'front::login.form' ? 'active' : '' }}">
+              <a class="nav-link">
+              {{-- <a href="{{ route('front::login.form') }}" class="nav-link"> --}}
+                Whislist
+              </a>
+            </li>
             <li class="nav-item submenu dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
               <ul class="dropdown-menu">
@@ -79,12 +85,12 @@ $route_name = request()->route()->getName();
             @else
             <li class="nav-item {{ $route_name == 'front::login.form' ? 'active' : '' }}">
               <a href="{{ route('front::login.form') }}" class="nav-link">
-                Login
+                Masuk
               </a>
             </li>
             <li class="nav-item {{ $route_name == 'front::register.form' ? 'active' : '' }}">
               <a href="{{ route('front::register.form') }}" class="nav-link">
-                Register
+                Daftar
               </a>
             </li>
             @endif

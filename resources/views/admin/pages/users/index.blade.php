@@ -59,7 +59,7 @@
           <td class="text-left">{{ $user->type }}</td>
           <td class="text-left">{{ $user->status }}</td>
           <td class="text-center">
-            <!-- <a href="{{ route('admin::users.edit', $user->user_id) }}" class="btn btn-primary btn-edit btn-sm">Edit</a> -->
+             {{-- <a href="{{ route('admin::users.edit', $user->user_id) }}" class="btn btn-primary btn-edit btn-sm">Edit</a>  --}}
             <form action="{{ route('admin::users.delete', $user->user_id) }}" class="d-inline" method="post">
               @csrf
               <button class="btn btn-danger btn-sm" onclick="return confirm('Apa kamu yakin ingin menghapus user ini?')">Delete</button>

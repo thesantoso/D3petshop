@@ -20,11 +20,12 @@ a[href] {
 }
 
 /* BannerArea Depan */
-.home_banner_area {
-  min-height: 600px;
+/* .home_banner_area {
+  min-height: 500px;
   background-position: bottom center;
+  background: url(../edustage/img/banner/logopets.jpg)
   
-}
+} */
 /* #banner_image {
   width: 100%;
   background: url(../edustage/img/banner/pets2.jpg) no-repeat;
@@ -139,4 +140,181 @@ a.btn-primary {
   padding: 15px 15px;
 }
 
+/* ============================================== */
+/* Tokopedia */
 
+.css-qiunk2 {
+    position: relative;
+    margin: 12px 0px 16px;
+}
+#cart.btn.add-to-cart {
+background-color: var(--G500,#586ecd);
+    border: none;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 40px;
+    line-height: 20px;
+    outline: none;
+    position: relative;
+    padding: 0px 16px;
+    text-indent: initial;
+    transition: background-color 300ms ease 0s;
+    width: 100%;
+    margin: 8px 0px;
+}
+
+#cart .btn> .add-to-cart > span {
+    display: block;
+    font-size: inherit;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 0px;
+    transition: opacity 300ms linear 0s, top 300ms linear 0s;
+    white-space: nowrap;
+}
+
+#cart.add-to-cart::after {
+    background-color: rgb(49, 53, 59);
+    border-radius: inherit;
+    inset: 0px;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 300ms ease 0s;
+}
+
+/* Start Beli Langssung */
+
+.css-w1lafs-unf-btn {
+    background-color: transparent;
+    border: 1px solid var(--G500,#586ecd);
+    border-radius: 8px;
+    color: var(--G500,#03AC0E);
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 40px;
+    line-height: 20px;
+    outline: none;
+    position: relative;
+    padding: 0px 16px;
+    text-indent: initial;
+    transition: background-color 300ms ease 0s;
+    width: 100%;
+    margin: 8px 0px;
+}
+
+.css-c1hnei > button:last-of-type {
+    margin-right: 8px;
+}
+
+.css-c1hnei > button {
+    flex: 1 1 0%;
+    margin: 0px;
+    padding: 0px 12px;
+}
+
+.css-w1lafs-unf-btn span {
+    display: block;
+    font-size: inherit;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 0px;
+    transition: opacity 300ms linear 0s, top 300ms linear 0s;
+    white-space: nowrap;
+}
+
+.css-c1hnei > button > span {
+    text-overflow: unset;
+}
+
+.css-w1lafs-unf-btn::after {
+    background-color: rgb(49, 53, 59);
+    border-radius: inherit;
+    inset: 0px;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 300ms ease 0s;
+}
+
+
+/* End Beli Langsung */
+
+.css-c1hnei > button {
+    flex: 1 1 0%;
+    margin: 0px;
+    padding: 0px 12px;
+}
+
+.css-cbvz5p {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 16px;
+}
+.css-1ptm0es:first-of-type {
+    padding-left: 0px;
+}
+.css-1ptm0es {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: var(--N700,rgba(49,53,59,0.96));
+    font-weight: bold;
+    padding: 0px 12px;
+    position: relative;
+}
+.css-1ptm0es > img {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+}
+.css-1ptm0es::after {
+    content: "";
+    width: 1px;
+    height: 16px;
+    background: rgb(196, 196, 196);
+    position: absolute;
+    right: 0px;
+}
+
+.css-1aleyzt {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 0px 0px 12px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-size: 12px;
+    color: var(--N700,#31353B);
+    font-weight: 800;
+}
+
+.css-1aleyzt > img {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+}

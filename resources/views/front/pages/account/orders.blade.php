@@ -19,29 +19,29 @@ $user = auth()->user();
               <th width="100" class="text-center">Tanggal</th>
               <th width="100" class="text-center">Kode</th>
               <th class="text-right">Total Pembayaran</th>
-              <th width="100" class="text-center">Status</th>
+              <th width="50" class="text-center">Status</th>
               <th colspan="2" width="50" class="text-center">Aksi</th>
             </tr>
           </thead>
           <tbody>
             @foreach($orders as $order)
             <tr>
-              <td class="text-center">
-                <small>
-                  {{ $order->created_at->format('d M Y') }}
-                </small>
+              <td class="text-center" >
+                <a>
+                  {{ $order->created_at->format('d/M/Y') }}
+                </a>
               </td>
               <td class="text-center">{{ $order->code }}</td>
               <td class="text-right">{{ $order->total_amount_label }}</td>
               <td class="text-center">{{ $order->status }}</td>
               <td width="50" class="text-center">
-                <a href="{{ route('front::account.order-detail', $order->order_id) }}" class="btn btn-info btn-edit btn-sm text-white">
-                  <i class="fa fa-search"></i> Detail
+                <a href="{{ route('front::account.order-detail', $order->order_id) }}" class="btn btn-info btn-edit text-body">
+                  <i class="fa fa-search"></i> Detail Pembelian
                 </a>
               </td>
-              <td width="50">
+              <td width="50" class="text-center">
                 @if($order->status == 'pending')
-                <a href="{{ route('front::payment-confirmation.form', ['code' => $order->code]) }}" class="btn btn-primary btn-edit btn-sm text-white">
+                <a href="{{ route('front::payment-confirmation.form', ['code' => $order->code]) }}" class="btn btn-info btn-edit text-body">
                   Konfirmasi Pembayaran
                 </a>
                 @endif

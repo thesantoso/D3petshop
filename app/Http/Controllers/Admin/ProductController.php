@@ -48,7 +48,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('admin::products.index')
-            ->with('info', "Produk '{$product->title}' berhasil ditambahkan.");
+            ->withSuccess("Horee {$product->title} Telah Ditambahkan Kedalam Produk");
     }
 
     public function show(Request $request, $id)
@@ -77,7 +77,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('admin::products.index')
-            ->with('info', "Produk '{$product->title}' berhasil di update.");
+            ->withInfo("Produk berhasil Diperbarui Menjadi {$product->title}");
     }
 
     public function delete(Request $request, $id)
@@ -86,7 +86,7 @@ class ProductController extends Controller
         $product->delete();
 
         return back()
-            ->with('info', "Produk '{$product->title}' telah dihapus.");
+            ->withError("Yeay {$product->title} Berhasil Dihapus Dari Produk");
     }
 
     public function save(product $product, Request $request)
@@ -94,8 +94,8 @@ class ProductController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            // 'cover' => $product->exists ? 'image|mimes:png,jpg' : 'required|image|mimes:png,jpg',
-            'cover' => 'required|image|file|max:1024',
+            'cover' => $product->exists ? 'image|mimes:png,jpg' : 'required|image|mimes:png,jpg',
+            // 'cover' => 'required|image|file|max:1024',
             'stock' => 'required|numeric',
             'price' => 'required|numeric',
             'category_ids.*' => 'numeric|exists:categories,category_id',

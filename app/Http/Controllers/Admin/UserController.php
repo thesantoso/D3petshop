@@ -18,7 +18,7 @@ class UserController extends Controller
 
         $query = User::where('type', 'member');
         if ($keyword) {
-            $query->where(function($q) use ($keyword) {
+            $query->where(function ($q) use ($keyword) {
                 $q->where('name', 'like', "%{$keyword}%");
                 $q->orWhere('type', 'like', "%{$keyword}%");
             });
@@ -73,7 +73,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
-        if($request->password != null) {
+        if ($request->password != null) {
             $request->password = bcrypt($request->password);
             $this->save($user, $request);
         } else {
@@ -82,7 +82,7 @@ class UserController extends Controller
 
         return redirect()
             ->route('admin::users.index')
-            ->with('info', "Users '{$users->name}' berhasil di update.");
+            ->withInfo("Users {$users->name} berhasil di update.");
     }
 
     public function delete(Request $request, $id)
@@ -91,7 +91,7 @@ class UserController extends Controller
         $user->delete();
 
         return back()
-            ->with('info', "User '{$user->name}' telah dihapus.");
+            ->withInfo("User {$user->name} telah dihapus.");
     }
 
     public function save(user $user, Request $request)

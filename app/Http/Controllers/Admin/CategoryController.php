@@ -17,7 +17,7 @@ class CategoryController extends Controller
 
         $query = Category::query();
         if ($keyword) {
-            $query->where(function($q) use ($keyword) {
+            $query->where(function ($q) use ($keyword) {
                 $q->where('name', 'like', "%{$keyword}%");
             });
         }
@@ -46,7 +46,8 @@ class CategoryController extends Controller
 
         return redirect()
             ->route('admin::categories.index')
-            ->with('info', "Kategori '{$category->name}' berhasil ditambahkan.");
+            ->withSuccess("Horee {$category->name} Berhasil Ditambahkan Kedalam Kategori");
+        // with('info', "Kategori '{$category->name}' berhasil ditambahkan.");
     }
 
     public function show(Request $request, $id)
@@ -76,7 +77,7 @@ class CategoryController extends Controller
 
         return redirect()
             ->route('admin::categories.index')
-            ->with('info', "Kategori '{$category->name}' berhasil di update.");
+            ->withInfo("Kategori berhasil Diperbarui Menjadi {$category->name}");
     }
 
     public function delete(Request $request, $id)
@@ -85,7 +86,7 @@ class CategoryController extends Controller
         $category->delete();
 
         return back()
-            ->with('info', "Kategori '{$category->name}' telah dihapus.");
+            ->withError("Horee {$category->name} Berhasil Dihapus Dari Kategori");
     }
 
     public function save(Category $category, Request $request)

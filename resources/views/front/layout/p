@@ -1,0 +1,24 @@
+<div class="css-qiunk2">
+    <div class="css-c1hnei">
+        <button data-unify="Button" type="button" class="css-ra3v66-unf-btn eg8apji0" data-testid="pdpBtnNormalPrimary" cursorshover="true">
+            <span cursorshover="true">+ Keranjang</span></button>
+            <button data-unify="Button" type="button" class="css-w1lafs-unf-btn eg8apji0" data-testid="pdpBtnNormalSecondary" cursorshover="true">
+                <span cursorshover="true">Beli Langsung</span></button>
+    </div>
+    <div id="pdpBuyerSubActions">
+        <div class="css-cbvz5p">
+            <button type="button" data-testid="btnPDPFooterChat" class="css-1ptm0es">
+                <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/0e8c0fc1.svg" alt="">Chat
+            </button>
+            <button type="button" data-testid="btnPDPFooterWishlist" class="css-1ptm0es">
+                <img data-testid="viewUnwishlisted" src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/88abeb07.svg" alt="">Wishlist
+            </button>
+            <button type="button" aria-label="Share" data-testid="pdpShareButton" class="css-1aleyzt" cursorshover="true">
+                <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/d9a5893b.svg" alt="">
+                    <span cursorshover="true">Share</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- element -->

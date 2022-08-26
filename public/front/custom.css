@@ -112,7 +112,7 @@ a.btn-primary {
 }
 
 .list-group .list-group-item.active {
-  background-color: #000000;
+  background-color: var(--G500,#586ecd);;
   border-color: #000000;
 }
 

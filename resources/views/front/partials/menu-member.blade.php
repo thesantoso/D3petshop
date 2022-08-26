@@ -10,7 +10,7 @@ $route_name = request()->route()->getName();
   </a>
   <a href="{{ route('front::account.orders') }}" class="{{ $route_name == 'front::account.orders' ? 'active' : '' }} list-group-item list-group-item-action">
     <i class="mr-2 text-primary ti ti-shopping-cart-full"></i>
-    Pembelian
+    Daftar Transakksi
   </a>
   <a href="{{ route('front::member-address.index') }}" class="{{ $route_name == 'front::member-address.index' ? 'active' : '' }} list-group-item list-group-item-action">
     <i class="mr-2 text-primary ti ti-map-alt"></i>
@@ -22,6 +22,6 @@ $route_name = request()->route()->getName();
   </a>
   <a href="{{ route('front::logout') }}" class="text-danger list-group-item list-group-item-action">
     <i class="mr-2 ti ti-close text-warning"></i>
-    Logout
+    Keluar
   </a>
 </div>
